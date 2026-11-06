@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Sacramento&display=swap" rel="stylesheet">
+
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-pink">
+
+  <!-- Floating Music Button -->
+  <button id="musicToggle" class="music-btn" title="Play Music">
+    🎵
+  </button>
+
+  <!-- HERO SECTION (CENTERED) -->
+  <section class="hero-section">
+    <div class="hero-container">
+      
+      <!-- Crown Icon -->
+      <div class="crown-icon">👑</div>
+
+      <!-- Main Heading -->
+      <h1 class="main-title">
+        <span class="birthday-text">HAPPY BIRTHDAY!</span>
+        <span id="displayFriendName" class="friend-name">Maria</span>
+      </h1>
+
+      <!-- Subtitle Message -->
+      <p id="displaySubtitle" class="hero-subtitle">
+        Wishing you a day filled with joy, laughter, and unforgettable moments! Click on the photos below to read secret notes! 🎉
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="btn-group">
+        <button id="celebrateBtn" class="btn btn-primary">
+          🎉 Celebrate!
+        </button>
+        <a href="#gallery" class="btn btn-secondary">
+          📸 View Memories
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-arrow">👇</div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="gallery-section">
+    <div class="gallery-header">
+      <h2>Memories & Notes 📸</h2>
+      <p>Click any photo to reveal a special note!</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div id="photoGrid" class="photo-grid">
+      <!-- Dito kusang lalabas ang mga polaroid pictures mula sa script.js -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Made with ❤️ for your special day!</p>
+  </footer>
+
+  <!-- PHOTO NOTE MODAL -->
+  <div id="photoModal" class="modal-backdrop hidden opacity-0">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close">&times;</button>
+      <div class="modal-image-container">
+        <img id="modalImage" src="" alt="Memory">
+      </div>
+      <div class="modal-body">
+        <h3 id="modalCaption"></h3>
+        <p id="modalNote"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
